@@ -1,7 +1,9 @@
 package com.bawei.lx_wzjmonth.utils;
 
 
-
+import com.bawei.lx_wzjmonth.Goods.bean.AddBean;
+import com.bawei.lx_wzjmonth.Goods.bean.DetailsBean;
+import com.bawei.lx_wzjmonth.Goods.bean.GoodBean;
 import com.bawei.lx_wzjmonth.login.LoginBean;
 import com.bawei.lx_wzjmonth.zhuce.SignUpBean;
 
@@ -20,6 +22,7 @@ import rx.Observable;
 public interface ApiServer {
     @POST
     Observable<SignUpBean> getsup(@Url String url, @QueryMap Map<String, String> map);
+
     @POST
     Observable<LoginBean> getlg(@Url String url, @QueryMap Map<String, String> map);
 
@@ -31,13 +34,15 @@ public interface ApiServer {
 
     @POST
     Observable<TwoBean> getRight(@Url String url, @QueryMap Map<String, Integer> map);
-
+*/
     @POST
     Observable<GoodBean> getgood(@Url String url, @QueryMap Map<String, Integer> map);
 
     @POST
     Observable<DetailsBean> getdetail(@Url String url, @QueryMap Map<String, String> map);
-*/
+
+    @POST
+    Observable<AddBean> getAdd(@Url String url, @QueryMap Map<String, String> map);
 
 
 }

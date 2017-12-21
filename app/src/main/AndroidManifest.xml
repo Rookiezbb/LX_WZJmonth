@@ -19,6 +19,8 @@
         </activity>
 
         <activity android:name=".zhuce.SignUpActivity" />
+        <activity android:name=".Goods.view.GoodActivity" />
+        <activity android:name=".Goods.view.DetailsActivity" />
     </application>
 
 </manifest>

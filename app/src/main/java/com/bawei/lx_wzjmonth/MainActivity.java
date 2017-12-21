@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bawei.lx_wzjmonth.Goods.view.GoodActivity;
 import com.bawei.lx_wzjmonth.login.LoginBean;
 import com.bawei.lx_wzjmonth.login.LoginConstract;
 import com.bawei.lx_wzjmonth.login.LoginPresenter;
@@ -72,6 +73,9 @@ public class MainActivity extends AppCompatActivity implements LoginConstract.IL
     public void showLogin(LoginBean.DataBean db) {
 
         Toasts.showLong(this, "登录成功");
+        if(db!=null){
+            startActivity(new Intent(MainActivity.this, GoodActivity.class));
+        }
         //finish();
     }
 
